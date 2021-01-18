@@ -33,7 +33,7 @@
     "prepublishOnly": "npm test && npm run lint && npm run release",
     "preversion": "npm run lint",
     "version": "npm run format && git add -A src --no-verify",
-    "postversion": "git push && git push --tags",
+    "postversion": "git push --no-verify && git push --tags --no-verify",
     "release": "standard-version --no-verify"
   },
   "husky": {
