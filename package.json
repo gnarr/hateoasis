@@ -1,6 +1,6 @@
 {
   "name": "hateoasis",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "An automatic HATEOAS traversing client.",
   "main": "dist/hateoasis.js",
   "types": "dist/hateoasis.d.ts",
