@@ -275,7 +275,7 @@ describe("request", () => {
     expect(isRequestable(links) && links.request("self"));
   });
 
-  it("throws an error when a non-existant link is requested", () => {
+  it("throws an error when a non-existant link is requested", async () => {
     const item: Hateoas = {
       links: [
         {
@@ -286,11 +286,10 @@ describe("request", () => {
       ],
     };
     const links = hateoasis<Hateoas>(item);
-    expect(async () => {
-      // eslint-disable-next-line prettier/prettier
-      // eslint-disable-next-line @typescript-eslint/no-unused-vars
-      const response =
-        isRequestable(links) && (await links.request("invalid", "POST", {}));
-    }).toThrow();
+    await expect(async () => {
+      return (
+        isRequestable(links) && (await links.request("invalid", "POST", {}))
+      );
+    }).rejects.toEqual(new Error(`Link not found`));
   });
 });
