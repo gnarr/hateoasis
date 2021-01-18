@@ -29,7 +29,6 @@
     "lint": "eslint --ignore-path .gitignore \"src/**/*.ts\"",
     "format": "prettier --ignore-path .gitignore \"src/**/*.+(ts|js|tsx)\" --write",
     "coveralls": "jest --coverage && cat ./coverage/lcov.info | coveralls",
-    "prepare": "npm run build",
     "prepublishOnly": "npm test && npm run lint && npm run release",
     "preversion": "npm run lint",
     "version": "npm run format && git add -A src --no-verify",
