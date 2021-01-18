@@ -7,10 +7,10 @@
 [![Downloads/week][11]][12]
 [![Dependabot Status][13]][14]
 
-[1]: https://www.travis-ci.com/gnarr/hateoasis.svg?branch=master
+[1]: https://www.travis-ci.com/gnarr/hateoasis.svg?branch=main
 [2]: https://www.travis-ci.com/gnarr/hateoasis
-[3]: https://coveralls.io/repos/github/gnarr/hateoasis/badge.svg?branch=master
-[4]: https://coveralls.io/github/gnarr/hateoasis?branch=master
+[3]: https://coveralls.io/repos/github/gnarr/hateoasis/badge.svg?branch=main
+[4]: https://coveralls.io/github/gnarr/hateoasis?branch=main
 [5]: https://img.shields.io/npm/v/hateoasis.svg?style=flat-square
 [6]: https://www.npmjs.com/package/hateoasis
 [7]: https://david-dm.org/gnarr/hateoasis.svg
