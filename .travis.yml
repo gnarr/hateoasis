@@ -7,14 +7,13 @@ branches:
   only:
   - main
 cache:
-  yarn: true
   directories:
     - node_modules
 before_install:
-  - yarn global add axios
+  - npm install -g axios
 install:
-  - yarn install
+  - npm install
 script:
-  - yarn build
-  - yarn test
-  - yarn coveralls
+  - npm run build
+  - npm run test
+  - npm run coveralls
