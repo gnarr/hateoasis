@@ -1,6 +1,6 @@
 {
   "name": "hateoasis",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "An automatic HATEOAS traversing client.",
   "main": "dist/hateoasis.js",
   "types": "dist/hateoasis.d.ts",
@@ -30,10 +30,11 @@
     "format": "prettier --ignore-path .gitignore \"src/**/*.+(ts|js|tsx)\" --write",
     "coveralls": "jest --coverage && cat ./coverage/lcov.info | coveralls",
     "prepare": "yarn build",
-    "prepublishOnly": "yarn test && yarn lint",
+    "prepublishOnly": "yarn test && yarn lint && yarn release",
     "preversion": "yarn lint",
     "version": "yarn format && git add -A src",
-    "postversion": "git push && git push --tags"
+    "postversion": "git push && git push --tags",
+    "release": "standard-version"
   },
   "husky": {
     "hooks": {
@@ -103,6 +104,7 @@
     "jest": "^26.6.3",
     "lint-staged": "^10.5.3",
     "prettier": "^2.2.1",
+    "standard-version": "^9.1.0",
     "ts-jest": "^26.4.4",
     "ts-node": "^9.1.1",
     "typescript": "^4.1.3"
