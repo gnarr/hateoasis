@@ -79,7 +79,7 @@ const hateoasis = <T>(item: any): T /*  & Hateoasified */ => {
           method: link.method,
           url: link.href,
         } as AxiosRequestConfig)
-      ).then((res: AxiosResponse<R>) => {
+      ).then((res: AxiosResponse<R & Hateoas>) => {
         res.data = hateoasis(res.data);
         return res;
       });
