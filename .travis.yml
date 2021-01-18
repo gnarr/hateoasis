@@ -4,15 +4,16 @@ node_js:
 - '14'
 branches:
   only:
-  - master
+  - main
 cache:
+  yarn: true
   directories:
     - node_modules
 before_install:
-  - npm update
+  - yarn update
 install:
-  - npm install
+  - yarn install
 script:
-  - npm run build
-  - npm test
-  - npm run coveralls
+  - yarn build
+  - yarn test
+  - yarn coveralls
