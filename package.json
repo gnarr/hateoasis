@@ -26,6 +26,7 @@
     "dev": "npx ts-node src/hateoasis.ts",
     "build": "tsc",
     "test": "jest",
+    "install-peers": "npx npm-install-peers",
     "lint": "eslint --ignore-path .gitignore \"src/**/*.ts\"",
     "format": "prettier --ignore-path .gitignore \"src/**/*.+(ts|js|tsx)\" --write",
     "coveralls": "jest --coverage && cat ./coverage/lcov.info | coveralls",
